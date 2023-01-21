@@ -1,0 +1,22 @@
+{
+  "name": "js-search-benchmark",
+  "version": "1.0.0",
+  "description": "A project to compare the performance of lunr and search-index",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "search",
+    "benchmark"
+  ],
+  "author": "Gabriel Birke <gb@birke-software.de>",
+  "license": "MIT",
+  "dependencies": {
+    "benchmark": "^2.1.4",
+    "just-shuffle": "^4.2.0",
+    "lunr": "^2.3.9",
+    "memory-level": "^1.0.0",
+    "search-index": "^3.3.0"
+  }
+}
