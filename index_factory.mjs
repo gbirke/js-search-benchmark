@@ -9,7 +9,7 @@ const siIndexName = "./cache/idx_si.json";
 
 export function createLunrIndex(documents) {
 	const idx = lunr(function() {
-		this.ref('uuid');
+		this.ref('_id');
 		this.field('body');
 		this.field('title');
 		this.field('created');
@@ -28,7 +28,7 @@ export function createLunrIndex(documents) {
 
 export async function createSearchIndex(documents) {
 	const idx = await si({db: MemoryLevel, stopwords});
-	await idx.PUT(documents, {stopwords, storeRawDocs: false})
+	await idx.PUT(documents, {stopwords, storeRawDocs: true})
 	return idx;
 }
 
